@@ -23,4 +23,7 @@ Route::get('/name/{sugih}', function ($sugih) {
 
 Route::get('/name/{nrp}/{name}', function ($nrp,$name) {
     return"hello " . $nrp . $name;
-})
+});
+Route::get('/person','PersonController@index');
+Route::get('/person/show/{param}', 'PersonController@show');
+Route::resource('student', 'StudentController');
